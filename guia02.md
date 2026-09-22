@@ -1,61 +1,34 @@
-Guía de Usuario: Registro de Productos
+# Guía de Usuario: Registro de Nuevo Producto
 
-1. Introducción y Objetivo
+![Banner Registro de Producto](https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80)
 
-1.1 ¿Qué permite realizar esta funcionalidad?
+## 1. Objetivo
+### 1.1 ¿Qué permite realizar esta funcionalidad?
+Esta funcionalidad permite a los administradores del inventario registrar nuevos artículos en la base de datos para que estén disponibles inmediatamente en el catálogo de ventas.
 
-Esta guía explica cómo los vendedores pueden agregar nuevos artículos al sistema principal para que estén disponibles de inmediato para su facturación y venta.
+## 2. Información necesaria
+Antes de comenzar el registro, asegúrese de tener a mano los siguientes datos:
+- Código de barras o SKU.
+- Nombre completo del producto.
+- Precio de venta.
+- Cantidad inicial en stock.
 
-2. Información necesaria antes de empezar
+## 3. Procedimiento
 
-Antes de acceder al sistema, asegúrese de tener a la mano la siguiente información básica del artículo:
+Siga estos pasos en orden para completar el registro correctamente:
 
-Código de barras (SKU) del fabricante.
+1. Ingrese al [Panel de Administración](https://ejemplo.com/login) usando sus credenciales de usuario.
+2. Diríjase a la sección de **Inventario** ubicada en el menú lateral izquierdo.
+3. Haga clic en el botón azul de **Nuevo Producto**.
+4. Complete todos los campos obligatorios en el formulario.
+5. Haga clic en **Guardar Producto**.
 
-Nombre comercial y marca.
+![Pantalla de Inventario](https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80)
 
-Precio de costo y precio de venta al público.
+## 4. Resultado esperado
 
-Stock inicial en almacén.
+### 4.1 Confirmación del sistema
+Al guardar correctamente, el sistema mostrará el siguiente mensaje de confirmación en la parte superior de la pantalla:
 
-3. Procedimiento de Registro
-
-Siga estas instrucciones detalladamente para evitar errores de duplicidad en la base de datos:
-
-Inicie sesión en el Panel de Administración con sus credenciales de vendedor.
-
-En el menú lateral izquierdo, seleccione la opción "Inventario".
-
-Haga clic en el botón verde de la esquina superior derecha que dice "+ Nuevo Producto".
-
-Complete el formulario con la información solicitada.
-
-Presione el botón "Guardar".
-
-4. Resultados y Verificación
-
-4.1 Mensaje del sistema
-
-Una vez guardado, el sistema mostrará un mensaje genérico de confirmación en la parte inferior de la pantalla:
-
-El registro se ha completado. Puede continuar agregando más productos.
-
-
-4.2 Verificación técnica (Avanzado)
-
-Si el equipo de soporte técnico necesita validar la creación en el servidor, este es el formato de respuesta que devuelve el sistema internamente:
-
-{
-  "status": "success",
-  "data": {
-    "product_id": 9845,
-    "sku": "ITEM-001",
-    "name": "Teclado Mecánico",
-    "saved_at": "2026-09-22T18:30:00Z"
-  }
-}
-
-
-5. Ayuda Adicional
-
-Si encuentra algún error durante el proceso (como una alerta de "código duplicado"), por favor no intente registrar el producto nuevamente. Tome una captura de pantalla y contacte inmediatamente al equipo de sistemas a través de nuestro Portal de Soporte Técnico.
+```text
+PRODUCTO_GUARDADO: El artículo ha sido registrado exitosamente y ya está disponible para la venta.
